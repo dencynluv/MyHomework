@@ -17,6 +17,7 @@ class Stick {
     weight = startingWeight
     color = startingColor
   }
+
  
   func rollStick () {
     print("rolling!")

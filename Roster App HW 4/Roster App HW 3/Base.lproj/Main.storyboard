@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kXi-ko-a10">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ajt-Rl-VEy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -105,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="149" y="285"/>
         </scene>
-        <!--Person View Controller Hw4-->
+        <!--View Controller Hw4-->
         <scene sceneID="RML-QX-47Z">
             <objects>
-                <viewController id="ajt-Rl-VEy" customClass="PersonViewControllerHw4" customModule="Roster_App_HW_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ajt-Rl-VEy" customClass="ViewControllerHw4" customModule="Roster_App_HW_3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WNy-Yy-VS5"/>
                         <viewControllerLayoutGuide type="bottom" id="B4T-vW-JaS"/>
