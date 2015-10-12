@@ -15,6 +15,7 @@ class ViewControllerHw4: UIViewController, UITableViewDataSource {
   
   @IBOutlet var tableView: UITableView!
   
+  
   override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -35,10 +36,33 @@ class ViewControllerHw4: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
     }
   
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    tableView.reloadData()
+  }
+  
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    print("Fired")
+    if segue.identifier == "showPersonDetailView" {
+      //let destinationViewController = segue.destinationViewController as! PersonDetailViewController
+      if let destinationViewController = segue.destinationViewController as? PersonDetailViewController {
+      
+      if let selectedIndexPath = tableView.indexPathForSelectedRow {
+      let selectedRow = selectedIndexPath.row
+      let chosenPerson = people[selectedRow]
+      
+      destinationViewController.selectedPerson = chosenPerson
+      
+      }
+    }
+  }
+}
+  
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
     return people.count
-    
   }
 
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -48,8 +72,7 @@ class ViewControllerHw4: UIViewController, UITableViewDataSource {
     
     cell.textLabel?.text = "\(person.firstName) \(person.lastName)"
     
-    return cell
-    
+    return cell    
   }
 
 }
