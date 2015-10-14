@@ -34,9 +34,9 @@ class ViewControllerHw4: UIViewController, UITableViewDataSource {
       people.append(nati)
       people.append(mom)
       
-//      for person in people {
-//        person.image = UIImage(named: "placeholder")
-//      }
+      for person in people {
+        person.image = UIImage(named: "placeholder")
+      }
       
       saveToArchive()
     }
@@ -84,7 +84,7 @@ class ViewControllerHw4: UIViewController, UITableViewDataSource {
     
     cell.firstNameLabel.text = person.firstName
     cell.lastNameLabel.text = person.lastName
-    //cell.personImageView.image = person.image
+    cell.personImageView.image = person.image
     
     
     return cell

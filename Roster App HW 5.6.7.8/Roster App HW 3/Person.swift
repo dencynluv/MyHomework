@@ -6,20 +6,20 @@
 //  Copyright © 2015 Cynthia Soto. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Person:NSObject, NSCoding  {
   
   var firstName = "Any"
   var lastName = "Doe"
-  //var image : UIImage?
-
+  var image : UIImage?
+  
   init(fName: String, lName: String) {
     firstName = fName
     lastName = lName
   }
   
-   required init?(coder aDecoder: NSCoder) {
+  required init?(coder aDecoder: NSCoder) {
     if let firstName = aDecoder.decodeObjectForKey("firstName") as? String {
       self.firstName = firstName
     }
@@ -27,19 +27,19 @@ class Person:NSObject, NSCoding  {
       self.lastName = lastName
     }
     
-//    if let data = aDecoder.decodeObjectForKey("image") as? NSData {
-//      self.image = UIImage(data: data)
-//    }
+    if let data = aDecoder.decodeObjectForKey("image") as? NSData {
+      self.image = UIImage(data: data)
+    }
     
   }
   
   func encodeWithCoder(aCoder: NSCoder) {
     aCoder.encodeObject(firstName, forKey: "firstName")
     aCoder.encodeObject(lastName, forKey: "lastName")
-//    if let image = image {
-//    if let data = UIImagePNGRepresentation(image) {
-//      aCoder.encodeObject(data, forKey: "image")
-//      }
-//    }
+    if let image = image {
+      if let data = UIImagePNGRepresentation(image) {
+        aCoder.encodeObject(data, forKey: "image")
+      }
+    }
   }
 }
