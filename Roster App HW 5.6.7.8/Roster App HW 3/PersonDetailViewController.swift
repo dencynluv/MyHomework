@@ -13,8 +13,8 @@ class PersonDetailViewController: UIViewController, UITextFieldDelegate {
   var selectedPerson = Person(fName: "John", lName: "Doe")
   
   @IBOutlet weak var firstNameTextField: UITextField!
-  @IBOutlet weak var lastNameTextField: UITextField!
-  
+  @IBOutlet weak var lastNameTextField: UITextField!  
+  @IBOutlet weak var imageView: UIImageView!
   
 
     override func viewDidLoad() {
@@ -25,6 +25,7 @@ class PersonDetailViewController: UIViewController, UITextFieldDelegate {
       
       firstNameTextField.text = selectedPerson.firstName
       lastNameTextField.text = selectedPerson.lastName
+      
 
         // Do any additional setup after loading the view.
     }
